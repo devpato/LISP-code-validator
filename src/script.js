@@ -8,12 +8,9 @@ function parenthesesAreBalanced() {
   let i;
   for (i = 0; i <= str.length; i++) {
     let char = str[i];
-    console.log('index', i);
     if (OPEN_BRACKET === char) {
-      console.log('opening');
       stack.push(char);
     } else if (CLOSE_BRACKET === char) {
-      console.log('closing');
       if (stack[stack.length - 1] === OPEN_BRACKET) {
         stack.pop();
       } else {
