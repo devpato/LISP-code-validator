@@ -6,12 +6,12 @@ function parenthesesAreBalanced() {
   const OPEN_BRACKET = '(';
   const CLOSE_BRACKET = ')';
   let i;
-  for (i = 0; i <= str.length; i++) {
+  for (i = 0; i < str.length; i++) {
     let char = str[i];
     if (OPEN_BRACKET === char) {
       stack.push(char);
     } else if (CLOSE_BRACKET === char) {
-      if (stack[stack.length - 1] === OPEN_BRACKET) {
+      if (stack.pop() === OPEN_BRACKET) {
         stack.pop();
       } else {
         stack.push(char);
