@@ -1,18 +1,19 @@
 <html>
   <head>
-    <title>Parentheses Balanced JS</title>
+    <title>LISP Code Validator JS</title>
     <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
     <script src="src/script.js"></script>
   </head>
   <body>
     <div class="validator">
       <textarea class="text-to-test" id="stringToTest"></textarea>
-      <button type="button" class="validate" onclick="parenthesesAreBalanced()">
+      <button type="button" class="validate" onclick="validLISPCode()">
         VALIDATE
       </button>
-      <button type="button" class="validate" onclick="reset()">
-        Reset
-      </button>
+      <div class="result">
+        <span class="question">Is this Valid LISP Code?</span>
+        <span id="res-value"></span>
+      </div>
     </div>
   </body>
 </html>
